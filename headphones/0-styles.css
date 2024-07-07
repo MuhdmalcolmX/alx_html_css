@@ -1,0 +1,259 @@
+/* ----------------------- CSS Reset Starts here ----------------------- */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* ----------------------- CSS Reset Ends here ----------------------- */
+
+  /* root variable starts here */
+:root {
+  /* colors */
+  --white: #ffffff;
+  --black: #000000;
+  --deepblue: #071629;
+  --pink: #FF6565;
+
+  /* fonts */
+  /* --xs: 18px;
+  --sm: 22px;
+  --md: 24px;
+  --lg: 42px;
+  --xl: 72px; */
+
+  /* fonts */
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 32px;
+  --xxl: 46px;
+
+  /* general */
+  --btn-br: 100px;
+}
+  /* root variable end here */
+
+
+/* -----------------------------------General Styles---------------------------------- */
+*, *::backdrop, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+body, html {
+    height: 100%;
+    background: url(./assets/headphones_hero_1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* -----------------------------------Header Styles---------------------------------- */
+header .logo {
+    width: 161px;
+    height: 32px;
+    display: flex;
+    float: left;
+}
+
+.navLinkContainer > li {
+  margin: 0.5rem;
+  overflow: hidden;
+}
+
+
+/* -----------------------------------Nav Styles---------------------------------- */
+header {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 70%;
+    margin: auto;  
+}
+
+.navLinkContainer {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin: auto;
+}
+
+.navLink {
+    list-style: none;
+}
+
+.navLink a {
+    text-decoration: none;
+    color: var(--white);
+   font-size: var(--xs);
+  }
+
+.navLink a:hover {
+    color: var(--pink);
+    cursor: pointer;
+}
+
+
+ /* -----------------------------------Container Styles---------------------------------- */ 
+ main {
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+ }
+
+ main article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ main article h3 {
+    font-size: var(--xl);
+    margin-top: 2em;
+    margin-bottom: 0.1em;
+    font-weight: 900;
+    /* width: 50%; */
+ }
+
+ main article h5 {
+    font-size: var(--md);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+main article p {
+    font-size: var(--md);
+    width: 60%;
+    font-weight: 200;
+    margin-bottom: 6em;
+}
+
+main section button {
+    border: none;
+    background: var(--pink);
+    color: var(--white);
+    border-radius: var(--btn-br);
+    font-size: var(--sm);
+    padding: 10px 25px 10px 25px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+main section {
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+ /* -----------------------------------Button Styles---------------------------------- */ 
+ button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+
+ /* -----------------------------------Media Queries---------------------------------- */ 
+
+ @media screen and (max-width: 768px) {
+    header {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        width: 90%;
+    }
+
+    main article h3, h1, p {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    main article h3, h1, p {
+        width: 80%;
+    }
+  
+    .navLinkContainer {
+      display: none;
+      /* float: right; */
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      margin: auto;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+    header .logo {
+      width: 161px;
+      height: 32px;
+      display: flex;
+      /* justify-content: center; */
+      /* float: right; */
+      align-items: center;
+  }
+
+
+
+  
+
+}
