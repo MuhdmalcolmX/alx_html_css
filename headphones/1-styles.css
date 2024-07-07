@@ -86,17 +86,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  position: relative;
+  /* position: relative; */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-body, html {
-  /* height: 100%; */
+/* body, html {
   background: url(./assets/headphones_hero_1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Source Sans Pro', sans-serif;
-}
+  
+} */
 
 
 /* -----------------------------------Header Styles---------------------------------- */
@@ -105,6 +105,7 @@ header .logo {
   height: 32px;
   display: flex;
   float: left;
+  position: absolute;
 }
 
 .navLinkContainer > li {
@@ -150,7 +151,7 @@ display: none;
 }
 
 /* -----------------------------------Container Styles---------------------------------- */ 
-main {
+/* main {
   text-align: center;
   width: 100%;
   height: 100%; 
@@ -159,13 +160,33 @@ main {
   justify-content: center;
   flex-direction: column;
   color: var(--white);
-}
+} */
 
 main article {
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-part {
+  background-image: url("./assets/headphones_hero_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+
+  text-align: center;
+  width: 100%;
+  height: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: var(--white);
 }
 
 main article h3 {
@@ -202,6 +223,78 @@ main section button {
 main section {
   margin-top: 1em;
   margin-bottom: 4em;
+}
+
+.what_we_do {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.what_we_do h3 {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-size: var(--xl);
+  line-height: 26px;
+  /* or 150% */
+  text-align: center;
+}
+
+.what_we_do h5 {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: var(--md);
+  line-height: 26px;
+  /* or 150% */
+  text-align: center;
+  width: 40%;
+  padding-top: 50px;
+}
+
+.whats {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 100px 100px 100px 100px;
+  width: 70%;
+}
+
+.each-whats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.whats img {
+  vertical-align: middle;
+  
+  margin-bottom: 10px;
+}
+
+.whats h3 {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  /* identical to box height, or 150% */
+  text-align: center;
+}
+
+.whats p {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: var(--md);
+  line-height: 26px;
+  /* or 150% */
+  text-align: center;
 }
 
 /* -----------------------------------Button Styles---------------------------------- */ 
