@@ -474,7 +474,29 @@
     opacity: 0.9;
   }
   
-  
+  /* -----------------------------------Animations Styles---------------------------------- */ 
+  .each-whats img, .res img{
+    transition: 1s ease;
+    }
+    
+    .each-whats img:hover, .res img:hover{
+    -webkit-transform: scale(1.4);
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: scale(1.4);
+    -ms-transform: rotateZ(-10deg);
+    transform: scale(1.5);
+    transition: 1s ease;
+    }
+
+    /* .each-whats img:hover{
+        -webkit-transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+        transition: 1s ease;
+        }
+   */
+
+
   /* -----------------------------------Media Queries---------------------------------- */ 
   
   @media screen and (max-width: 768px) {
