@@ -1,0 +1,708 @@
+/* ----------------------- CSS Reset Starts here ----------------------- */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  /* ----------------------- CSS Reset Ends here ----------------------- */
+  
+  /* root variable starts here */
+  :root {
+  /* colors */
+  --white: #ffffff;
+  --black: #000000;
+  --deepblue: #071629;
+  --pink: #FF6565;
+  
+  /* fonts */
+  /* --xs: 18px;
+  --sm: 22px;
+  --md: 24px;
+  --lg: 42px;
+  --xl: 72px; */
+  
+  /* fonts */
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 32px;
+  --xxl: 46px;
+  
+  /* general */
+  --btn-br: 100px;
+  }
+  /* root variable end here */
+  
+  
+  /* -----------------------------------General Styles---------------------------------- */
+  *, *::backdrop, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* position: relative; */
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  html, body {
+      height: 100%;
+      min-height: 100%;
+    position: relative;
+  }
+  
+  /* body, html {
+    background: url(./assets/headphones_hero_1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  } */
+  
+  
+  /* -----------------------------------Header Styles---------------------------------- */
+  /* header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+  } */
+  
+  header .logo {
+    width: 161px;
+    height: 32px;
+    display: flex;
+    float: left;
+  }
+  
+  .navLinkContainer > li {
+  margin: 0.5rem;
+  overflow: hidden;
+  }
+  
+  
+  
+  
+  /* -----------------------------------Nav Styles---------------------------------- */
+  header {
+    /* padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 200px; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    gap: 350px;
+  }
+  
+  .navLinkContainer {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin: auto;
+  }
+  
+  .navLink {
+    list-style: none;
+  }
+  
+  .navLink a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--xs);
+  }
+  
+  .navLink a:hover {
+    color: var(--pink);
+    cursor: pointer;
+  }
+  
+  #menuToggle input {
+  display: none;
+  }
+  
+  /* -----------------------------------Container Styles---------------------------------- */ 
+  /* main {
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+  } */
+  
+  main article {
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .main-part {
+    background-image: url("./assets/headphones_hero_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+  }
+  
+  main article h3 {
+    font-size: var(--xl);
+    margin-top: 10em;
+    margin-bottom: 0.1em;
+    font-weight: 900;
+    /* width: 50%; */
+  }
+  
+  main article h5 {
+    font-size: var(--md);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+  }
+  
+  main article p {
+    font-size: var(--md);
+    width: 60%;
+    font-weight: 200;
+    margin-bottom: 6em;
+  }
+  
+  main article button {
+    border: none;
+    background: var(--pink);
+    color: var(--white);
+    border-radius: var(--btn-br);
+    font-size: var(--sm);
+    padding: 10px 25px 10px 25px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+  }
+  
+  main section {
+    margin-top: 1em;
+    margin-bottom: 4em;
+  }
+  
+  .what_we_do {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+  }
+  
+  .what_we_do h3 {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-size: var(--xl);
+    line-height: 26px;
+    /* or 150% */
+    text-align: center;
+  }
+  
+  .what_we_do h5 {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 26px;
+    /* or 150% */
+    text-align: center;
+    width: 40%;
+    padding-top: 50px;
+  }
+  
+  .whats {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* padding: 100px 100px 100px 100px; */
+    width: 70%;
+    padding-top: 100px;
+  }
+  
+  .each-whats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .whats img {
+    vertical-align: middle;
+    
+    margin-bottom: 10px;
+  }
+  
+  .whats h3 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 150% */
+    text-align: center;
+  }
+  
+  .whats p {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 26px;
+    /* or 150% */
+    text-align: center;
+  }
+
+
+  .our_results {
+    background: url(./assets/headphones_hero_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    color: var(--white);
+  }
+  
+  .our_results h3 {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-size: var(--xl);
+    line-height: 26px;
+    /* or 150% */
+    text-align: center;
+  }
+  
+  .our_results h5 {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 26px;
+    /* or 150% */
+    text-align: center;
+    width: 40%;
+    padding-top: 50px;
+  }
+  
+  .res {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    /* padding: 100px 100px 100px 100px; */
+    width: 70%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    justify-content: center;
+  }
+  
+    .contact_us {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .contact_us h3 {
+    font-size: var(--xl);
+    margin-top: 3em;
+    /* margin-bottom: 1em; */
+    font-weight: 900;
+    /* width: 50%; */
+    padding-bottom: 50px;
+  }
+
+  .contact_us button {
+    border: none;
+    background: var(--pink);
+    color: var(--white);
+    border-radius: var(--btn-br);
+    font-size: var(--sm);
+    padding: 10px 25px 10px 25px;
+  }
+
+  /* .form_container {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* Style inputs with type="text", select elements and textareas */
+    input, select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    outline: 0; 
+    border-width: 0 0 2px; 
+    border-color: var(--deepblue); 
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  footer {
+    background-color: #071629;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 100%;
+    position: relative;
+
+    padding: 50px 100px 50px 100px;
+}
+
+.logo-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100px;
+    
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-content p {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding-top: 20px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.35;
+
+}
+
+
+  /* -----------------------------------Button Styles---------------------------------- */ 
+  button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  
+  /* -----------------------------------Media Queries---------------------------------- */ 
+  
+  @media screen and (max-width: 768px) {
+    header {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        width: 90%;
+    }
+  
+    main article h3, h1, p {
+        width: 80%;
+    }
+  
+    header {
+      gap: 70px;
+    }
+  
+    .what_we_do h5 {
+      width: 120%;
+    }
+  
+    .whats {
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .each-whats {
+      width: 30%;
+    }
+  
+    .whats p {
+      width: 100%;
+    }
+
+    .res {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .our_results h5 {
+        width: 120%;
+      }
+  
+  
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+  main article h3, p {
+      width: 90%;
+  }
+  
+  main article h5 {
+    width: 60%;
+  }
+  
+  .logo {
+    position: absolute;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2em;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 32px;
+    position: absolute; 
+    top: 22px;
+    left: 10px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+  }
+  
+  /*
+  * Just a quick hamburger
+  */
+  #menuToggle span
+  {
+    display: block;
+    justify-content: space-evenly;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    margin-left: -160px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    
+    background: var(--white);
+    border-radius: 0px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  
+  #menuToggle span:first-child
+  {
+  transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+  transform-origin: 0% 100%;
+  }
+  
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  #menuToggle input:checked ~ span
+  {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: var(--white);
+  }
+  
+  /*
+  * But let's hide the middle one.
+  */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  /*
+  * Ohyeah and the last one should go the other direction
+  */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+   transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+  .navLinkContainer
+  {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  padding-top: 40px;
+  
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  /*
+  * And let's slide it in from the left
+  */
+  #menuToggle input:checked ~ ul
+  {
+  transform: none;
+  }
+  
+  .what_we_do h5 {
+    width: 130%;
+  }
+  
+  .whats {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .each-whats {
+    width: 100%;
+  }
+  
+  .whats p {
+    width: 100%;
+  }
+
+  .res {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 100px 100px 100px 100px; */
+    width: 70%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    justify-content: center;
+  }
+
+  .our_results h5 {
+    width: 150%;
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+  input, select, textarea {
+    width: 70%; /* Full width */
+  }
+
+  .logo-socials {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100px; */
+    
+}
+  
+  
+  }
